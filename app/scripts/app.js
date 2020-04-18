@@ -27,7 +27,9 @@ function app() {
     if (products) mountProductList(products);
   };
 
-  loadJSON(getProductList, '../resources/products.json');
+  var rootPath = getRootPath();
+
+  loadJSON(getProductList, rootPath + '/resources/products.json');
 }
 
 app();
@@ -44,4 +46,8 @@ function loadJSON(callback, filePath) {
   };
 
   xobj.send(null);
+}
+
+function getRootPath() {
+  return window.location.href;
 }
