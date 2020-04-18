@@ -27,9 +27,7 @@ function app() {
     if (products) mountProductList(products);
   };
 
-  var rootPath = getRootPath();
-
-  loadJSON(getProductList, rootPath + '/resources/products.json');
+  loadJSON(getProductList, '../resources/products.json');
 }
 
 app();
