@@ -11,5 +11,6 @@ function loadJSON(callback, filePath) {
 }
 
 function getRootPath() {
+  
   return window.location.href;
 }
